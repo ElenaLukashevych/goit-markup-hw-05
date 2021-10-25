@@ -638,6 +638,7 @@ header {
 
 .card-box {
   position: relative;
+  overflow: hidden;
 }
 
 .projects-overlay {
@@ -660,12 +661,14 @@ header {
 
   bottom: 0;
 
-  opacity: 0;
+  transform: translateY(100%);
+
+  transition: transform var(--duration) var(--cubic);
 }
 
 .projects-link:hover .projects-overlay,
 .projects-link:focus .projects-overlay {
-  opacity: 1;
+  transform: translateY(0%);
 }
 
 .projects-box {
