@@ -13,6 +13,9 @@
   --box-shadow: 0px 4px 4px 0px #00000040;
 
   --item-gap: 30px;
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 250ms;
 }
 
 /* Глобальные стили */
@@ -134,6 +137,8 @@ header {
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+
+  transition: color var(--duration) var(--cubic), fill var(--duration) var(--cubic);
 }
 
 .nav-link:hover,
@@ -242,6 +247,8 @@ header {
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+
+  transition: background-color var(--duration) var(--cubic);
 }
 
 .btn:hover,
@@ -412,6 +419,9 @@ header {
   justify-content: center;
   align-items: center;
   fill: var(--svg-start-color);
+  border-radius: 50%;
+
+  transition: background-color var(--duration) var(--cubic), fill var(--duration) var(--cubic);
 }
 
 .social-item:not(:last-child) {
@@ -422,7 +432,6 @@ header {
 .social-link:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 /* Клиенты */
@@ -453,6 +462,8 @@ header {
   border-radius: 4px;
 
   fill: var(--svg-start-color);
+
+  transition: fill var(--duration) var(--cubic), border var(--duration) var(--cubic);
 }
 
 .clients-link:hover,
@@ -485,6 +496,8 @@ header {
 
 .address-map {
   color: var(--primary-white-color);
+
+  transition: color var(--duration) var(--cubic);
 }
 
 .address-map:hover,
@@ -494,6 +507,8 @@ header {
 
 .address-link {
   color: var(--link-footer-color);
+
+  transition: color var(--duration) var(--cubic);
 }
 
 .address-link:hover,
@@ -536,6 +551,8 @@ header {
   fill: var(--primary-white-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color var(--duration) var(--cubic), fill var(--duration) var(--cubic);
 }
 
 .social-link-footer:hover,
@@ -582,6 +599,8 @@ header {
 
   color: var(--title-text-color);
   background-color: var(--background-color);
+
+  transition: background-color var(--duration) var(--cubic), color var(--duration) var(--cubic);
 }
 
 .filter-btn:hover,
@@ -617,8 +636,6 @@ header {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-
-
 .card-box {
   position: relative;
 }
@@ -647,10 +664,9 @@ header {
 }
 
 .projects-link:hover .projects-overlay,
-.projects-link:focus .projects-overlay
-{
+.projects-link:focus .projects-overlay {
   opacity: 1;
-} 
+}
 
 .projects-box {
   padding: 20px 24px;
