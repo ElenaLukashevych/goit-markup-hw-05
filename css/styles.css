@@ -706,6 +706,10 @@ header {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity var(--duration) var(--cubic);
 }
 
 .backdrop.is-hidden {
@@ -729,6 +733,9 @@ header {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   border-radius: 4px;
+
+  opacity: 1;
+  transition: opacity var(--duration) var(--cubic);
 }
 
 .btn-modal {
